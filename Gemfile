@@ -19,6 +19,11 @@ group :development do
   gem "spring"
 end
 
+group :test do
+  gem 'vcr'
+  gem 'webmock'
+end
+
 group :development, :test do
   gem "minitest-rails-capybara"
   gem "pry", :require => "pry"
