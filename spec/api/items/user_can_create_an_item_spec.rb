@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe '/api/v1/items' do
-  it 'get items' do
+  it 'can add an item' do
     # When I send a POST request to `/api/v1/items` with a name, description, and image_url
     post "/api/v1/items"
 
