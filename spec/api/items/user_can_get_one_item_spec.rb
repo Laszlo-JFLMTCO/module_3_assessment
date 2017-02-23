@@ -17,11 +17,4 @@ RSpec.describe '/api/v1/items' do
     expect(item).not_to have_key("created_at")
     expect(item).not_to have_key("updated_at")
   end
-
-# When I send a DELETE request to `/api/v1/items/1`
-# I receive a 204 JSON response if the record is successfully deleted
-
-# When I send a POST request to `/api/v1/items` with a name, description, and image_url
-# I receive a 201 JSON  response if the record is successfully created
-# And I receive a JSON response containing the id, name, description, and image_url but not the created_at or updated_at
 end
