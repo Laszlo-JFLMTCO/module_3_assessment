@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe '/api/v1/items' do
-  it 'get items' do
+  it 'get a specific item' do
     Item.create(name: 'sdfsdf', description: 'sdfsdf', image_url: 'sdfsdfsd')
     # When I send a GET request to `/api/v1/items`
     get "/api/v1/items"
