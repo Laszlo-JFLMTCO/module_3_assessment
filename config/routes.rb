@@ -3,6 +3,12 @@ Rails.application.routes.draw do
 
   get '/search' => 'search#index'
 
+  namespace :api, defaults: {format: 'json'} do
+    namespace :v1 do
+      resources :items, only: [:index]
+    end
+  end
+
   resources :items,  only: [:index, :show]
   resources :orders, only: [:index, :show]
   resources :users,  only: [:index, :show]

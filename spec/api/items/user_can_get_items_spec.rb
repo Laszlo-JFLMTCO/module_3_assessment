@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.descibe '/api/v1/items' do
+RSpec.describe '/api/v1/items' do
   scenario 'get items' do
     # When I send a GET request to `/api/v1/items`
     get "/api/v1/items"
