@@ -28,7 +28,7 @@ RSpec.describe 'Store' do
 
     expect(test_store.long_name).to eq("BEST BUY MOBILE - CHERRY CREEK SHOPPING CENTER")
     expect(test_store.city).to eq("DENVER")
-    expect(test_store.distance).to eq("3.45")
+    expect(test_store.distance).to eq(3.45)
     expect(test_store.phone_number).to eq("303-270-9189")
     expect(test_store.store_type).to eq("Mobile SAS")
   end
