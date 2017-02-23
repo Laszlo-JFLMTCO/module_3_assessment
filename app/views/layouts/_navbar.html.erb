@@ -20,7 +20,7 @@
         <a href="/orders">Orders</a>
       </li>
     </ul>
-        <%= form_tag '/search', class: 'form-inline' do %>
+        <%= form_tag '/search', method: 'GET', class: 'form-inline' do %>
           <%= text_field_tag :searchbox, nil, placeholder: 'Enter zip code...', class: 'form-control' %>
           <%= submit_tag 'search', class: "btn btn-default" %>
         <% end %>
