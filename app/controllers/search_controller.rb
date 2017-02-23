@@ -6,7 +6,7 @@ class SearchController < ApplicationController
     # @stores = response["stores"].map do |store_raw|
     #   Store.new(store_raw)
     # end
-    # binding.pry
+    binding.pry
 # response = get "https://api.bestbuy.com/v1/stores((area(80202,25)))?apiKey=ENV['SEARCH_API_KEY']&format=json"
 puts "hello"
   end
