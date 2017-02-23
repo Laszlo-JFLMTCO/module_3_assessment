@@ -7,7 +7,7 @@ RSpec.describe 'User search stores' do
     visit root_path
     
     # And I fill in a search box with "80202" and click "search"
-    within(.navbar) do
+    within('.navbar') do
       fill_in :searchbox, with: '80202'
       click_on 'search'
     end
