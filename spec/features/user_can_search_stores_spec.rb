@@ -22,9 +22,9 @@ RSpec.describe 'User search stores' do
       # And I should see the long name, city, distance, phone number and store type for each of the 10 results
       expect(page).to have_content('16 Total Stores')
       expect(page).to have_css('tr', count: 11)
-      expect(page).to have_content('Long name')
+      expect(page).to have_content('Store name')
       expect(page).to have_content('City')
-      expect(page).to have_content('Distance')
+      expect(page).to have_content('Distance from 80202')
       expect(page).to have_content('Phone number')
       expect(page).to have_content('Store type')
     end
