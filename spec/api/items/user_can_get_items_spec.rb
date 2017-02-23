@@ -5,17 +5,20 @@ RSpec.describe '/api/v1/items' do
     # When I send a GET request to `/api/v1/items`
     get "/api/v1/items"
 
-    response = JSON.parse(response.body)
+    json = JSON.parse(response.body)
+
+    binding.pry
 
     # I receive a 200 JSON response containing all items
-    expect(page).to have_http_status(200)
+    expect(response.first).to have_http_status(200)
     # And each item has an id, name, description, and image_url but not the created_at or updated_at
-    expect(response).to have_key("id")
-    expect(response).to have_key("name")
-    expect(response).to have_key("description")
-    expect(response).to have_key("image_url")
-    expect(response).not_to have_key("created_at")
-    expect(response).not_to have_key("updated_at")
+    expect(response.first).to have_key(:id)
+    expect(response.first).to have_key("id")
+    expect(response.first).to have_key("name")
+    expect(response.first).to have_key("description")
+    expect(response.first).to have_key("image_url")
+    expect(response.first).not_to have_key("created_at")
+    expect(response.first).not_to have_key("updated_at")
   end
 
 # When I send a GET request to `/api/v1/items/1`
